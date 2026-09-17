@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand: #1b4fa0;
+  --brand-hover: #163f82;
+  --navy: #12356e;
+  --navy-2: #0d2a56;
+  --page: #f4f7fb;
+  --surface: #ffffff;
+  --ink: #0f172a;
+  --muted: #5b6b82;
+  --line: #e4edf6;
+  --soft: #eef4fb;
+  --track: #e8eef6;
+  --hover: #f5f9fd;
+  --ok: #0f7a56;
+  --ok-bg: #e9f8f1;
+  --watch: #b45309;
+  --watch-bg: #fff7e8;
+  --urgent: #c81e1e;
+  --urgent-bg: #fdecec;
+  --overdue: #9f1239;
+  --overdue-bg: #fce7f3;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-ibm);
+  --font-serif: var(--font-ibm);
+  --font-mono: var(--font-plex-mono);
+  --color-brand: var(--brand);
+  --color-page: var(--page);
+  --color-surface: var(--surface);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  min-height: 100dvh;
+}
+
+html {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-ibm), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 1rem;
 }
